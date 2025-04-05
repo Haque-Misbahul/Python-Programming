@@ -44,3 +44,6 @@ f = chaicoder(2)
 g = chaicoder(3)
 
 print(f)
+
+print(f(3))
+print(g(3))
