@@ -38,10 +38,18 @@ class ElectricCar(Car):
 my_tesla = ElectricCar("Tesla", "Model S", "85kwh")
 
 
+# solutin 9 test
+print(isinstance(my_tesla, Car))
+print(isinstance(my_tesla, ElectricCar))
+
+
+
+
+
 # solutin 8 test
-my_car = Car("Audi", "Q2")
-# my_car.model = "Q3"
-print(my_car.model())
+# my_car = Car("Audi", "Q2")
+# # my_car.model = "Q3"
+# print(my_car.model())
 
 # solutin 7 test
 # print(Car.genaral_description())
