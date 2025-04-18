@@ -4,14 +4,14 @@ class Car:
 
     def __init__(self, brand, model):
         self.__brand = brand
-        self.model = model
+        self.__model = model
         Car.total_car += 1
 
     def get_brand(self):
         return self.__brand +" !"
 
     def full_name(self):
-        return f"{self.__brand} {self.model}"
+        return f"{self.__brand} {self.__model}"
     
     def fuel_type(self):
         return "petrol or diesel"
@@ -19,6 +19,10 @@ class Car:
     @staticmethod
     def genaral_description():
         return "Cars are useful"
+    
+    @property
+    def model(self):
+        return self.__model
     
 
 class ElectricCar(Car):
@@ -33,6 +37,11 @@ class ElectricCar(Car):
 
 my_tesla = ElectricCar("Tesla", "Model S", "85kwh")
 
+
+# solutin 8 test
+my_car = Car("Audi", "Q2")
+# my_car.model = "Q3"
+print(my_car.model())
 
 # solutin 7 test
 # print(Car.genaral_description())
