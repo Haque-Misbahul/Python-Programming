@@ -38,12 +38,27 @@ class ElectricCar(Car):
 my_tesla = ElectricCar("Tesla", "Model S", "85kwh")
 
 
-# solutin 9 test
-print(isinstance(my_tesla, Car))
-print(isinstance(my_tesla, ElectricCar))
 
 
+# solutin 9 test/answer
+# print(isinstance(my_tesla, Car))
+# print(isinstance(my_tesla, ElectricCar))
 
+# solution 10 answer
+class Battery:
+    def battery_info(self):
+        return "this is battery"
+
+class Engine:
+    def engine_info(self):
+        return "This is engine"
+
+class ElectricCarTwo(Battery, Engine, Car):
+    pass
+
+my_new_tesla = ElectricCarTwo("Tesla", "Model S")
+print(my_new_tesla.engine_info())
+print(my_new_tesla.battery_info())
 
 
 # solutin 8 test
