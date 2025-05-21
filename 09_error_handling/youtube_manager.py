@@ -1,8 +1,14 @@
-
+import json
 
 def load_data():
-   pass
-    
+    try:
+        with open('youtube.txt', 'r') as file:
+            test = json.load(file)
+            # print(type(test))
+            return test
+    except FileNotFoundError:
+        return []
+
 def save_data_helper(videos):
     pass
 
